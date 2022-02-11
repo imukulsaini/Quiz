@@ -33,7 +33,7 @@ export function Navbar() {
             <NavLink to="/" className="flex items-center gap-1 py-2 px-2">
               <BrandLogo className="w-16 h-16" />
               <span className="text-2xl font-semibold text-headline-500">
-                Anime Quiz{" "}
+                Crux Anime
               </span>
             </NavLink>
           </div>
