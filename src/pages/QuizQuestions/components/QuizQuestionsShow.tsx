@@ -29,7 +29,7 @@ export function QuizQuestionsShow({ isModalInfo }: QuizQuestionsProps) {
     state: { userData },
   } = useAuth();
 
-  const { start, stop, seconds } = useTimer(10);
+  const { start, stop, seconds } = useTimer(30);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [quizStatus, setQuizStatus] = useState<string>("idle");
   const [userPoints, setUserPoints] = useState<number>(0);
