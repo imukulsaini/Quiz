@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { useAuth } from "../../context/Auth/auth";
 import { useQuiz } from "../../context/Quiz/Quiz";
 import { getQuizQuestions } from "../../firebase/firebase.config";
 import { QuizInfoModal } from "./components/QuizInfoModal";
@@ -10,7 +11,7 @@ export function QuizQuestions() {
   const [isInfoQuizModal, setInfoQuiz] = useState<boolean>(true);
   const [loading, setLoading] = useState<string>("idle");
   const [error, setError] = useState<string>("");
-
+  const  {state:{userData}}  =  useAuth()
   const { quizDispatch } = useQuiz();
   useEffect(() => {
     setInfoQuiz(true);
@@ -35,7 +36,7 @@ export function QuizQuestions() {
         }
       })();
     }
-  }, [quizID]);
+  }, [quizID,userData]);
 
   return (
     <div className="h-screen w-full bg-primary">
