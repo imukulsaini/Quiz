@@ -24,7 +24,7 @@ export function QuizResult() {
     <>
       <div className="w-full h-screen bg-primary">
         <Navbar />
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center bg-primary ">
           <QuizResultHeader
             score={userAnswers.score}
             displayName={userData?.displayName}
