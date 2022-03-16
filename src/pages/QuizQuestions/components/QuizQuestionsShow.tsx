@@ -109,7 +109,7 @@ export function QuizQuestionsShow({ isModalInfo }: QuizQuestionsProps) {
     };
 
     setUserPoints((userPoints) =>
-      isOptionRight ? userPoints + 2 : userPoints - 1
+      isOptionRight ? userPoints + 2 : userPoints
     );
 
     nextQuestion(answer);

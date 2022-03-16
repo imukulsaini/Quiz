@@ -48,7 +48,7 @@ export function QuizInfoModal({
                 <span> +2 Points For Correct Answers</span>
               </li>
               <li>
-                <span> -1 Points For Wrong Answers</span>
+                <span> No Negative Points For Wrong Answers</span>
               </li>
               <li>
                 <span>
