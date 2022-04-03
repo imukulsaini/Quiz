@@ -17,3 +17,9 @@ export function getNewUserValueAfterFormatTime(
   };
   return result;
 }
+
+export  function sortUserScore(score: UserQuizScore[]) {
+  return  score.sort(function (a, b) {
+     return b.playTime - a.playTime;
+   });
+ }
